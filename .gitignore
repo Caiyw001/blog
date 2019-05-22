@@ -1,0 +1,6 @@
+# VScode编辑器
+.vscode
+
+# npm包
+node_modules/
+package-lock.json

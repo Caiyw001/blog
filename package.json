@@ -1,0 +1,30 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "彩洋威个人博客",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Caiyw001/blog.git"
+  },
+  "keywords": [
+    "博客",
+    "交流",
+    "互动",
+    "学习"
+  ],
+  "author": "caiyangwei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Caiyw001/blog/issues"
+  },
+  "homepage": "https://github.com/Caiyw001/blog#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.1.0",
+    "express": "^4.17.0"
+  }
+}
