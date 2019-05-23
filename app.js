@@ -3,9 +3,12 @@ let app = Express();
 let config = require('config');
 let bodyParse=require('body-parser');
 
+let multer=require('multer');
+var upload = multer({ dest: 'uploads/' });
+
 //body参数转化
-app.use(bodyParse.urlencoded({limit:'100mb'}));
-app.use(bodyParse.json({limit:'100mb'}));
+app.use(bodyParse());
+app.use(upload.none());
 
 //记录请求响应时间
 let restime = require('./middlewares/restime');
