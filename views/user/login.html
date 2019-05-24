@@ -1,0 +1,51 @@
+<html>
+
+<head>
+  <title>登录页面</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+  <div id="div_01">
+    <div>
+      用户名：<input type="text" id="name">
+    </div>
+
+    <div>
+      密码：<input type="text" id="pwd">
+    </div>
+
+    <div>
+      <input type="submit" id="submit">
+    </div>
+  </div>
+
+  <img id="img_surprise" src="/static/img/surprise.png">
+</body>
+
+</html>
+
+<script type="text/javascript">
+  $(function () {
+    $('#img_surprise').hide();
+
+    $('#submit').click(function () {
+      $.ajax({
+        url: '/user/login',
+        method: 'post',
+        contentType:'application/form-data',
+        data: {
+          name: $('#name').val(),
+          pwd: $('#pwd').val()
+        },
+        success: function (data, status, xhr) {
+          $('#img_surprise').show();
+        },
+        error: function (xhr, status, errr) {
+
+        }
+      }
+      )
+    })
+  })
+</script>

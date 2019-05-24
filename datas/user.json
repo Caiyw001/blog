@@ -1,17 +1,9 @@
 [
   {
+    "id":1,
     "name": "cyw",
     "age": "27",
-    "sex": "man"
-  },
-  {
-    "name": "lcd",
-    "age": "28",
-    "sex": "man"
-  },
-  {
-    "name": "wdy",
-    "age": "26",
-    "sex": "man"
+    "sex": "man",
+    "pwd":"12345"
   }
 ]
