@@ -25,7 +25,7 @@ routes.get('/:name', function (req, res) {
 /**
  * 获取全部用户信息
  */
-routes.get('/', function (req, res) {
+routes.get('/',async function (req, res) {
   let users = USER.getusers();
   res.send(users);
 })

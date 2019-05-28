@@ -1,4 +1,5 @@
 const fs = require('fs');
+const JWT=require('./token');
 var users = [];
 
 /**
@@ -80,7 +81,8 @@ function login(req, res, next) {
   }
 
   if (user.pwd == pwd) {
-    return res.status(200).send(user);
+    let token=JWT.gettoken(user);
+    return res.status(200).send(token);
   } else {
     return res.status(502).send({ errcode: 502, errmsg: '账号或密码错误！' });
   }
