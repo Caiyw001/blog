@@ -2,6 +2,6 @@
     "port": 3000,
     "privatekey": "caiyw",
     "algorithm": {
-        "algorithm": "RSA256"
+        "algorithm": "RS256"
     }
 }

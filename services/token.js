@@ -2,17 +2,13 @@ const jwt=require('jsonwebtoken');
 const config=require('config');
 
 function gettoken(user){
-    let token=jwt.sign(user,config.privatekey,config.algorithm,function(err,token){
-        console.log(token);
+    let token=jwt.sign(user, config.privatekey,{
+        expiresIn: 60 * 60
     });
     return token;
 }
 
-function validatatoken(token){
-    let user=jwt.verify(token,config.privatekey);
-}
 
 module.exports={
-    gettoken,
-    validatatoken
+    gettoken
 }

@@ -16,4 +16,9 @@ let arrInt = [{ age: 27 }, { age: 28 }, { age: 29 }];
 console.log(_.map(arrInt,
     { age: 30 }
 ));
+
+console.log(_.size(arrInt));
+
 //#endregion
+
+console.log(100);
